@@ -1,0 +1,40 @@
+{
+  "name": "flat-er",
+  "version": "1.0.0",
+  "description": "Flattens nested js objects to one level",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "npm run build && npx jest",
+    "clean": "rm -rf dist node_modules",
+    "shrink": "npm prune --production && npm shrinkwrap",
+    "cond-install": "if [ ! -d node_modules ]; then npm i; fi;",
+    "build": "npm run cond-install && npx webpack --mode production",
+    "preversion": "npm run clean && npm test",
+    "postversion": "git add . && git commit --amend && git push"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/molesoft/flat-er.git"
+  },
+  "keywords": [
+    "flatten",
+    "object"
+  ],
+  "author": "Adam Monica",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/molesoft/flat-er/issues"
+  },
+  "homepage": "https://github.com/molesoft/flat-er#readme",
+  "devDependencies": {
+    "jest": "^26.0.1",
+    "@babel/core": "^7.9.6",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/preset-env": "^7.9.6",
+    "babel-jest": "^26.0.1",
+    "babel-loader": "^8.1.0",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-node-externals": "^1.7.2"
+  }
+}
