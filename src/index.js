@@ -20,4 +20,4 @@ class FlatEr {
     }
   }
 }
-module.exports = new FlatEr()
+export default new FlatEr()

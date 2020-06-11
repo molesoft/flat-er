@@ -1,0 +1,1 @@
+export function flatten(obj: any): object;
