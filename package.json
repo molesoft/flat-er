@@ -1,6 +1,6 @@
 {
   "name": "flat-er",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Flattens nested js objects to one level",
   "main": "dist/index.js",
   "scripts": {
@@ -25,6 +25,9 @@
   "bugs": {
     "url": "https://github.com/molesoft/flat-er/issues"
   },
+  "files": [
+    "/dist"
+  ],
   "homepage": "https://github.com/molesoft/flat-er#readme",
   "devDependencies": {
     "jest": "^26.0.1",
