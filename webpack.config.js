@@ -5,8 +5,7 @@ var nodeExternals = require('webpack-node-externals');
 
 module.exports = {
   entry: {
-    index: './src/index.js'
-
+    index: './src/index.js',
   },
   output: {
     filename: '[name].js',
@@ -19,7 +18,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.m?js$/,
+        test: /.js/,
         exclude: /(node_modules|bower_components)/,
         use: {
           loader: 'babel-loader',
