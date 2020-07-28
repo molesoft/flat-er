@@ -2,13 +2,12 @@
 
 exports[`Should flatten 1`] = `
 Object {
-  "baz": 2,
-  "cat.colors.0": "black",
-  "cat.colors.1": "white",
-  "cat.litterBox.clean": false,
-  "cat.whiskers": true,
-  "dogs.0": "lab",
-  "dogs.1": "great dane",
-  "foo": "bar",
+  "pets.cats.0.colors.0": "black",
+  "pets.cats.0.colors.1": "white",
+  "pets.cats.0.litterBox.clean": false,
+  "pets.cats.0.name": "mrSocks",
+  "pets.cats.0.whiskers": true,
+  "pets.dogs.0.goodBoy": true,
+  "pets.dogs.0.name": "douggie",
 }
 `;

@@ -1,24 +1,30 @@
-import flat from '../src/index'
+import fe from '../src/index'
 
 it('Should flatten', () => {
-  const obj = {
-    foo: 'bar',
-    baz: 2,
-    dogs: [
-      "lab",
-      "great dane"
-    ],
-    cat: {
-      whiskers: true,
-      litterBox: {
-        clean: false
-      },
-      colors: [
-        'black',
-        'white'
+  const stuff = {
+    pets: {
+      dogs: [
+        {
+          name: 'douggie',
+          goodBoy: true
+        }
+      ],
+      cats: [
+        {
+          name: 'mrSocks',
+          whiskers: true,
+          litterBox: {
+            clean: false
+          },
+          colors: [
+            'black',
+            'white'
+          ]
+        }
       ]
     }
   }
-  const flattened = flat.flatten(obj)
+  const flattened = fe.flatten(stuff)
+  console.log(JSON.stringify(flattened, null, 2))
   expect(flattened).toMatchSnapshot()
 })
