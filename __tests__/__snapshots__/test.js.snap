@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should flatten 1`] = `
+Object {
+  "baz": 2,
+  "cat.colors.0": "black",
+  "cat.colors.1": "white",
+  "cat.litterBox.clean": false,
+  "cat.whiskers": true,
+  "dogs.0": "lab",
+  "dogs.1": "great dane",
+  "foo": "bar",
+}
+`;

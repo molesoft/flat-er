@@ -1,7 +1,9 @@
 class FlatEr {
   flatten(obj, agg = {}, pth = '') {
     const pthPrefix = `${pth}${pth ? '.' : ''}`
-    if(Array.isArray(obj)) {
+    if(obj === null || obj === undefined) {
+      agg[pth] = obj
+    } else if(Array.isArray(obj)) {
       obj.forEach((item, i) => {
         const newPth = `${pthPrefix}${i}`
         this.flatten(item, agg, newPth)
